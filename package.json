@@ -10,6 +10,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "express": "^4.14.0",
     "ioctl": "^2.0.0",
     "sense-hat-led": "^1.0.0"
   }

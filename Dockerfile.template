@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-node:7.2.1-20161216
+FROM resin/%%RESIN_MACHINE_NAME%%-node:7
 
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
@@ -6,6 +6,6 @@ ENV INITSYSTEM on
 COPY package.json ./
 RUN JOBS=MAX npm i --unsafe-perm --production && npm cache clean
 
-COPY . ./
+COPY *.js ./
 
 CMD ["npm", "start"]
