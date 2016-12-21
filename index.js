@@ -113,11 +113,13 @@ var app = express()
 
 app.get('/tree', function (req, res) {
   TREESHOWN = true;
+  CANDLESSHOWN = false;
   REDRAW = true;
   res.send('OK!')
 })
 
 app.get('/christmas', function (req, res) {
+  TREESHOWN = true;
   CANDLESSHOWN = true;
   REDRAW = true;
   res.send('OK!')
@@ -125,6 +127,7 @@ app.get('/christmas', function (req, res) {
 
 app.get('/off', function (req, res) {
   TREESHOWN = false;
+  CANDLESSHOWN = false;
   REDRAW = true;
   res.send('OK!')
 })
